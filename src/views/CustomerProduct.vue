@@ -12,19 +12,19 @@
                     <div class="carousel-item active">
                     <img src="@/assets/images/product-tent.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Tent</h3>
+                        <h3>帳篷</h3>
                     </div>
                     </div>
                     <div class="carousel-item">
                     <img src="@/assets/images/product-kitchen.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Kitchenware</h3>
+                        <h3>廚具</h3>
                     </div>
                     </div>
                     <div class="carousel-item">
                     <img src="@/assets/images/product-bag.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Backpack</h3>
+                        <h3>機能背包</h3>
                     </div>
                     </div>
                 </div>
@@ -37,22 +37,22 @@
             <div class="row mt-7">
                 <div class="col-lg-3">
                     <div class="list sticky-top mb-4">
-                        <h5 class="h3 text-primary pb-2 list__title mb-5">Categories</h5>
+                        <h5 class="h3 text-primary pb-2 list__title mb-5">分類</h5>
                         <div class="list-group mb-5">
                             <a href="" class="list-group-item list-group-item-action" data-toggle="list" :class="{'active' : visibility == 'all'}" @click.prevent="visibility = 'all'">
-                                <i class="fas fa-box mr-3"></i>All Products
+                                <i class="fas fa-box mr-3"></i>所有產品
                             </a>
                             <a href="" class="list-group-item list-group-item-action" data-toggle="list" :class="{'active' : visibility == 'Tent'}" @click.prevent="visibility = 'Tent'">
-                                <i class="fas fa-home mr-3"></i>Tent
+                                <i class="fas fa-home mr-3"></i>帳篷
                             </a>
                             <a href="" class="list-group-item list-group-item-action" data-toggle="list" :class="{'active' : visibility == 'Bag'}" @click.prevent="visibility = 'Bag'">
-                                <i class="fas fa-bed mr-3"></i>Sleeping Bag
+                                <i class="fas fa-bed mr-3"></i>睡袋
                             </a>
                             <a href="" class="list-group-item list-group-item-action" data-toggle="list" :class="{'active' : visibility == 'Fire'}" @click.prevent="visibility = 'Fire'">
-                                <i class="fas fa-fire mr-3"></i>Camp Fire
+                                <i class="fas fa-fire mr-3"></i>柴火
                             </a>
                             <a href="#" class="list-group-item list-group-item-action" :class="{'active' : visibility == 'Pot'}" @click.prevent="visibility = 'Pot'">
-                                <i class="fas fa-utensils mr-3"></i>Camp Pot
+                                <i class="fas fa-utensils mr-3"></i>廚具
                             </a>
                         </div>
                     </div>
@@ -120,6 +120,7 @@ export default {
                 vm.products = temp.filter(item=>{
                     return item.is_enabled === 1
                 })
+                console.log(response);
                 vm.pagination = response.data.pagination;
             })
         },
