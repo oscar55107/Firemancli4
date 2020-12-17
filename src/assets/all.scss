@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/functions";
+@import "./helpers/_variables";
+@import "~bootstrap/scss/bootstrap"; 
+
+@import "./mixin";
+@import "./layout";
+@import "./index";
+@import "./brand";
+@import "./customerproduct";
+@import "./dashboard";
+
+// @import "./productdetail";
